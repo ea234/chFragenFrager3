@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{049984FF-D769-4D84-9B85-6731967268E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>chFragenFrager3</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chFF3Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chFF3Main.Designer.cs">
+      <DependentUpon>chFF3Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chFFAuswahlFragen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chFFAuswahlFragen.Designer.cs">
+      <DependentUpon>chFFAuswahlFragen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chFFBildanzeige.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chFFBildanzeige.Designer.cs">
+      <DependentUpon>chFFBildanzeige.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsAntwort.cs" />
+    <Compile Include="clsAnwFragenFrager.cs" />
+    <Compile Include="clsFkFragenKatalogLaden.cs" />
+    <Compile Include="clsFrage.cs" />
+    <Compile Include="clsFragenKatalog.cs" />
+    <Compile Include="clsLernFrabrik.cs" />
+    <Compile Include="clsStringArray.cs" />
+    <Compile Include="clsTypAbfrage.cs" />
+    <Compile Include="fkCommonDialog.cs" />
+    <Compile Include="fkDocumentOpen.cs" />
+    <Compile Include="fkExportFrageBogen.cs" />
+    <Compile Include="fkExportXmlFragenKatalog.cs" />
+    <Compile Include="fkIniDatei.cs" />
+    <Compile Include="fkString.cs" />
+    <Compile Include="chFF3DialogExportDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chFF3DialogExportDetail.Designer.cs">
+      <DependentUpon>chFF3DialogExportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fkTestErstellungFragenkatalog.cs" />
+    <Compile Include="fkZahl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="chFF3Main.resx">
+      <DependentUpon>chFF3Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chFFAuswahlFragen.resx">
+      <DependentUpon>chFFAuswahlFragen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chFFBildanzeige.resx">
+      <DependentUpon>chFFBildanzeige.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chFF3DialogExportDetail.resx">
+      <DependentUpon>chFF3DialogExportDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
